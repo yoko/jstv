@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{{ title|escape }} test</title>
+<link rel="stylesheet" href="http://github.com/jquery/qunit/raw/master/qunit/qunit.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+<script src="http://github.com/jquery/qunit/raw/master/qunit/qunit.js"></script>
+</head>
+<body>
+<h1 id="qunit-header">{{ title|escape }} test</h1>
+<h2 id="qunit-banner"></h2>
+<h2 id="qunit-userAgent"></h2>
+<ol id="qunit-tests"></ol>
+{% if scripts %}
+{% for script in scripts %}
+<script src="{{ base|escape }}{{ script|escape }}"></script>
+{% endfor %}
+{% else %}
+<script>
+test('script', 1, function() {
+	ok(false, 'not found');
+});
+</script>
+{% endif %}
+</body>
+</html>
