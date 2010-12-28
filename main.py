@@ -24,12 +24,12 @@ class QUnitHandler(webapp.RequestHandler):
 
 
 def main():
-    application = webapp.WSGIApplication(
-      [
-        ('/qunit', QUnitHandler)],
-      debug=True)
-    run_wsgi_app(application)
+  application = webapp.WSGIApplication(
+    [
+      ('/qunit', QUnitHandler)],
+    debug=True)
+  run_wsgi_app(application)
 
 
 if __name__ == '__main__':
-    main()
+  main()
