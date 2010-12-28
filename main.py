@@ -1,7 +1,6 @@
 #!python
 
 import os
-import os.path
 import logging
 
 from google.appengine.ext import webapp
