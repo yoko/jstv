@@ -7,6 +7,12 @@ handlers:
   - url: /
     static_files: public/index.html
     upload: public/index.html
+  - url: /frameworks
+    static_dir: public/frameworks
+  - url: /example
+    static_dir: public/example
+  - url: /js
+    static_dir: public/js
 
   - url: .*
     script: main.py

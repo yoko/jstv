@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{{ title|escape }} test</title>
+<link rel="stylesheet" href="/frameworks/jsspec/JSSpec.css">
+<script src="/frameworks/jsspec/diff_match_patch.js"></script>
+<script src="/frameworks/jsspec/JSSpec.js"></script>
+{% if modules %}
+{% for module in modules %}
+<script src="/js/modules/{{ module|escape }}.js"></script>
+{% endfor %}
+{% endif %}
+</head>
+<body>
+{% if scripts %}
+{% for script in scripts %}
+<script src="{{ base|escape }}{{ script|escape }}"></script>
+{% endfor %}
+{% else %}
+<script>
+describe('script', {
+	'should be found': function() {
+		value_of(false).should_be(true);
+	}
+});
+</script>
+{% endif %}
+</body>
+</html>

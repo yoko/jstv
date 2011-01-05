@@ -49,6 +49,10 @@ dt {
 dd {
 	margin: 0.5em 0 1em 1em;
 }
+
+li {
+	margin: 0.25em 0;
+}
 </style>
 </head>
 <body>
@@ -61,27 +65,59 @@ dd {
 <section>
 <h2>Test Suites</h2>
 <ul>
-	<li><a href="#qunit">QUnit</a></li>
+	<li><a href="#jsspec">JSSpec</a></li><!--
+	--><li><a href="#jsspec-sinon">JSSpec + Sinon</a></li><!--
+	--><li><a href="#qunit">QUnit</a></li><!--
+	--><li><a href="#qunit-sinon">QUnit + qunit-sinon</a></li>
 </ul>
 </section>
 
+<section id="jsspec">
+	<h2><a href="http://jania.pe.kr/aw/moin.cgi/JSSpec">JSSpec</a></h2>
+	<h3>URL</h3>
+	<p>http://jstv.codefairy.org/jsspec</p>
+	<h3>Parameters</h3>
+	<dl>
+		<dt>base (option)</dt>
+		<dd>Script's base URL</dd>
+		<dt>script</dt>
+		<dd>Script's URL/path. Specifies many files like <code>script=script.js;script=test.js</code></dd>
+		<dt>title (option)</dt>
+		<dd>Script's title for <code>document.title</code></dd>
+	</dl>
+	<h3>Example</h3>
+	<ul>
+		<li><a href="http://jstv.codefairy.org/jsspec?script=%2Fexample%2Fjsspec.js">http://jstv.codefairy.org/jsspec?script=%2Fexample%2Fjsspec.js</a></li>
+	</ul>
+</section>
+<section id="jsspec-sinon">
+	<h2><a href="http://jania.pe.kr/aw/moin.cgi/JSSpec">JSSpec</a> + <a href="http://sinonjs.org/">Sinon</a></h2>
+	<h3>URL</h3>
+	<p>http://jstv.codefairy.org/jsspec/sinon</p>
+</section>
+
 <section id="qunit">
-<h2>QUnit</h2>
-<h3>URL</h3>
-<p>http://jstv.codefairy.org/qunit</p>
-<h3>Parameters</h3>
-<dl>
-	<dt>base (option)</dt>
-	<dd>Script's base URL</dd>
-	<dt>script</dt>
-	<dd>Script's URL/path. Specifies many files like <code>script=script.js;script=test.js</code></dd>
-	<dt>title (option)</dt>
-	<dd>Script's title for <code>document.title</code></dd>
-</dl>
-<h3>Example</h3>
-<ul>
-	<li><a href="http://jstv.codefairy.org/qunit?base=https%3A%2F%2Fgist.github.com%2Fraw%2F751419%2F;script=jquery.replaceClass.js;script=qunit.replaceClass.js">http://jstv.codefairy.org/qunit?base=https%3A%2F%2Fgist.github.com%2Fraw%2F751419%2F;script=jquery.replaceClass.js;script=qunit.replaceClass.js</a></li>
-</ul>
+	<h2><a href="http://docs.jquery.com/Qunit">QUnit</a></h2>
+	<h3>URL</h3>
+	<p>http://jstv.codefairy.org/qunit</p>
+	<h3>Parameters</h3>
+	<dl>
+		<dt>base (option)</dt>
+		<dd>Script's base URL</dd>
+		<dt>script</dt>
+		<dd>Script's URL/path. Specifies many files like <code>script=script.js;script=test.js</code></dd>
+		<dt>title (option)</dt>
+		<dd>Script's title for <code>document.title</code></dd>
+	</dl>
+	<h3>Example</h3>
+	<ul>
+		<li><a href="http://jstv.codefairy.org/qunit?base=https%3A%2F%2Fgist.github.com%2Fraw%2F751419%2F;script=jquery.replaceClass.js;script=qunit.replaceClass.js">http://jstv.codefairy.org/qunit?base=https%3A%2F%2Fgist.github.com%2Fraw%2F751419%2F;script=jquery.replaceClass.js;script=qunit.replaceClass.js</a></li>
+	</ul>
+</section>
+<section id="qunit-sinon">
+	<h2><a href="http://docs.jquery.com/Qunit">QUnit</a> + <a href="http://sinonjs.org/qunit/">sinon-qunit</a></h2>
+	<h3>URL</h3>
+	<p>http://jstv.codefairy.org/qunit/sinon</p>
 </section>
 
 <footer>
